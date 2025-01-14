@@ -1,0 +1,53 @@
+body {
+  background-color: rgb(0, 58, 109);
+}
+
+/* title, slogan */
+.landing {
+  background-color: rgba(240, 248, 255, 0.185);
+  border-radius: 12px 12px;
+  margin-r
+}
+
+/* HERO IMG */
+#bg {
+  margin-top: 40px;
+  -webkit-transition: opacity 0.5s ease-in;
+  -moz-transition: opacity 0.5s ease-in;
+  -o-transition: opacity 0.5s ease-in;
+  -ms-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+}
+
+/* carousel */
+#carouselExampleIndicators {
+  width: 100%;
+  padding: 50px;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-item {
+    height: 600px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Adding shadow to carousel item */
+  }
+
+.carousel-item img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  filter: invert(1);
+}
+
+  
+  .carousel-inner {
+    position: relative;
+    overflow: hidden;
+  }
