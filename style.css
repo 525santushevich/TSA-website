@@ -1,15 +1,8 @@
 body {
   background-color: rgb(0, 58, 109);
+  padding: 50px 50px;
 }
 
-/* title, slogan */
-.landing {
-  background-color: rgba(240, 248, 255, 0.185);
-  border-radius: 12px 12px;
-  margin-r
-}
-
-/* HERO IMG */
 #bg {
   margin-top: 40px;
   -webkit-transition: opacity 0.5s ease-in;
@@ -19,10 +12,11 @@ body {
   transition: opacity 0.5s ease-in;
 }
 
-/* carousel */
 #carouselExampleIndicators {
   width: 100%;
   padding: 50px;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .carousel-inner img {
@@ -31,10 +25,9 @@ body {
 }
 
 .carousel-item {
-    height: 600px;
-    position: relative;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Adding shadow to carousel item */
-  }
+  height: 600px;
+  position: relative;
+}
 
 .carousel-item img {
   object-fit: cover;
@@ -46,8 +39,47 @@ body {
   filter: invert(1);
 }
 
-  
-  .carousel-inner {
-    position: relative;
-    overflow: hidden;
-  }
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  z-index: 6;
+}
+
+#buttonContainer {
+  margin-top: 20px;
+}
+
+#uniqueButton {
+  background-color: #ffffff;
+  color: rgb(38, 0, 255);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#uniqueButton:hover {
+  background-color: #005a99;
+}
+
+.landing {
+  background-color: rgba(240, 248, 255, 0.185);
+  border-radius: 12px 12px;
+  text-align: center;
+  position: relative;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  z-index: 10; /* Ensure it is above other elements */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  transform: translateY(-20px);
+}
+
+.slogan {
+  margin: 0 auto;
+}
