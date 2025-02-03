@@ -124,3 +124,27 @@ body {
 strong {
   color: #ffffff;
 }
+
+.title2 {
+  padding: 30px 200px 30px 200px;
+}
+
+.welcome {
+  font-size: 325%;
+  font-family: "Kanit", serif;
+  color: rgb(172, 30, 30);
+  text-shadow: 1px 1px 1px rgb(245, 244, 244);
+}
+
+.back {
+  background-color: rgba(78, 78, 211, 0.514);
+  border: 10px solid transparent;
+  padding: 15px;
+  border-radius: 10% 10% 10% 10%;
+}
+
+.description {
+  font-family: "Abel", serif;
+  margin-top: 2%;
+  color: white;
+}
