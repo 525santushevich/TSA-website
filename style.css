@@ -3,126 +3,33 @@ body {
   padding: 50px 50px;
 }
 
-#bg {
-  margin-top: 40px;
-  -webkit-transition: opacity 0.5s ease-in;
-  -moz-transition: opacity 0.5s ease-in;
-  -o-transition: opacity 0.5s ease-in;
-  -ms-transition: opacity 0.5s ease-in;
-  transition: opacity 0.5s ease-in;
-}
-
-#carouselExampleIndicators {
-  width: 100%;
-  padding: 50px;
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.carousel-inner img {
-  width: 100%;
-  height: auto;
-}
-
-.carousel-item {
-  height: 600px;
-  position: relative;
-}
-
-.carousel-item img {
-  object-fit: cover;
-  height: 100%;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  filter: invert(1);
-}
-
-.carousel-inner {
-  position: relative;
-  overflow: hidden;
-  z-index: 6;
-}
-
-#buttonContainer {
-  margin-top: 20px;
-}
-
-#uniqueButton {
-  background-color: #ffffff;
-  color: rgb(38, 0, 255);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-#uniqueButton:hover {
-  background-color: #005a99;
-}
-
 .landing {
-  background-color: rgba(240, 248, 255, 0.185);
-  border-radius: 12px 12px;
+  background-color: rgba(216, 237, 255, 0.185);
   text-align: center;
-  position: relative;
+  height: 10rem;
+  width: 50em;
+  margin: 0 auto;
+  padding: 30px;
 }
 
 .title {
+  font-family: "RocknRoll One", serif;
   font-size: 3rem;
   font-weight: bold;
   color: white;
   position: relative;
-  z-index: 10; /* Ensure it is above other elements */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  transform: translateY(-20px);
 }
 
 .slogan {
-  margin: 0 auto;
+  font-family: "Roboto Condensed", serif;
+  margin-top: 3%;
+  color: rgb(172, 30, 30);
+  text-shadow: 1px 1px 1px rgb(245, 244, 244);
 }
 
-/* cards for ocmpetitions */
-.card {
-  background-color: #ff7321;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.993);
-  margin: 15px;
-  overflow: hidden;
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card-header {
-  background-color: #385039;
-  color: white;
-  padding: 10px;
-  font-size: 1.2em;
-  text-align: center;
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-}
-
-.card-body {
-  padding: 15px;
-  border-radius: 0 0 10px 10px;
-  color: #000000;
-}
-
-.card-body p {
-  margin: 5px 0;
-}
-
-strong {
-  color: #ffffff;
+.h2-slogan {
+  font-size: 2rem;
 }
 
 .title2 {
@@ -140,11 +47,159 @@ strong {
   background-color: rgba(78, 78, 211, 0.514);
   border: 10px solid transparent;
   padding: 15px;
-  border-radius: 10% 10% 10% 10%;
+  border-radius: 30% 30% 30% 30%;
+  border: rgba(255, 255, 255, 0.411) 9px double;
+  background-clip: content-box;
 }
 
 .description {
   font-family: "Abel", serif;
   margin-top: 2%;
   color: white;
+}
+
+/*Carousel*/
+.carousel {
+  height: 600px;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 500px 100px;
+  grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+  align-items: center;
+  justify-items: center;
+}
+main#carousel {
+  grid-row: 1 / 2;
+  grid-column: 1 / 8;
+  width: 100vw;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 600px;
+  --items: 5;
+  --middle: 3;
+  --position: 1;
+  pointer-events: none;
+}
+
+div.item {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  background-color: coral;
+  --r: calc(var(--position) - var(--offset));
+  --abs: max(calc(var(--r) * -1), var(--r));
+  transition: all 0.25s linear;
+  transform: rotateY(calc(-10deg * var(--r)))
+    translateX(calc(-300px * var(--r)));
+  z-index: calc((var(--position) - var(--abs)));
+  box-shadow: 3px 3px 3px white;
+}
+
+div.item:nth-of-type(1) {
+  --offset: 1;
+  background-image: url("/Pace\ Univ\ NY\ Campus.jpg");
+
+  background-size: cover;
+}
+div.item:nth-of-type(2) {
+  --offset: 2;
+  background-image: url("/tiered-case-study-classroom-5th-floor_0.jpg");
+
+  background-size: cover;
+}
+div.item:nth-of-type(3) {
+  --offset: 3;
+  background-image: url("/images.png");
+  background-size: cover;
+}
+div.item:nth-of-type(4) {
+  --offset: 4;
+  background-image: url("/lubin-image-gallery-facilities-6.jpg");
+  background-size: cover;
+}
+div.item:nth-of-type(5) {
+  --offset: 5;
+  background-image: url("/lubin-image-gallery-facilities-8.jpg");
+  background-size: cover;
+}
+
+input:nth-of-type(1) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(1):checked ~ main#carousel {
+  --position: 1;
+}
+
+input:nth-of-type(2) {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(2):checked ~ main#carousel {
+  --position: 2;
+}
+
+input:nth-of-type(3) {
+  grid-column: 4 /5;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(3):checked ~ main#carousel {
+  --position: 3;
+}
+
+input:nth-of-type(4) {
+  grid-column: 5 / 6;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(4):checked ~ main#carousel {
+  --position: 4;
+}
+
+input:nth-of-type(5) {
+  grid-column: 6 / 7;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(5):checked ~ main#carousel {
+  --position: 5;
+}
+
+/* leadership roles images START*/
+#members1 {
+  height: 200px;
+  width: 100px;
+  float: left;
+}
+#members2 {
+  height: 200px;
+  width: 100px;
+  float: right;
+}
+
+/* Leadership roles images END*/
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+h2 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.7);
 }
