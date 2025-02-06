@@ -6,10 +6,12 @@ body {
 .landing {
   background-color: rgba(216, 237, 255, 0.185);
   text-align: center;
-  height: 10rem;
-  width: 50em;
+  width: 55em;
   margin: 0 auto;
-  padding: 30px;
+  padding: 20px;
+  border-radius: 50px;
+  border: rgba(255, 255, 255, 0.411) 9px double;
+  background-clip: content-box;
 }
 
 .title {
@@ -67,6 +69,7 @@ body {
   grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
   align-items: center;
   justify-items: center;
+  margin-top: 3%;
 }
 main#carousel {
   grid-row: 1 / 2;
@@ -202,4 +205,88 @@ h2 {
   text-align: center;
   color: rgb(255, 255, 255);
   text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.7);
+}
+
+/* NavBar */
+.navbar {
+  display: flex;
+  height: 5rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid rgb(170, 14, 14);
+}
+
+/* logo style  */
+.logo img {
+  width: 4rem;
+  height: 4rem;
+  margin-left: 1rem;
+}
+
+.hamburger-menu {
+  padding-right: 1.5rem;
+  cursor: pointer;
+}
+
+.hamburger-menu .line {
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  margin-bottom: 10px;
+  background-color: black;
+  cursor: pointer;
+}
+
+.nav-menu {
+  position: fixed;
+  width: 94%;
+  top: 6rem;
+  left: 18px;
+  background-color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+.nav-menu a {
+  display: block;
+  text-align: center;
+  padding: 5px 0;
+}
+.nav-menu a:hover {
+  background-color: rgb(223, 251, 219);
+}
+
+.hide {
+  display: none;
+}
+
+/* for Desktop view  */
+@media screen and (min-width: 600px) {
+  .navbar {
+    justify-content: space-around;
+  }
+  .nav-menu {
+    display: block;
+    position: static;
+    width: auto;
+    margin-right: 20px;
+    background: none;
+  }
+  .nav-menu a {
+    display: inline-block;
+    padding: 15px 20px;
+  }
+  .nav-menu a:hover {
+    background-color: rgb(223, 251, 219);
+    border-radius: 5px;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+}
+
+/* Members */
+#members {
+  font-size: 5rem;
+  text-align: center;
+  color: rgb(170, 14, 14);
+  text-shadow: 1px 1px 1px white;
 }
