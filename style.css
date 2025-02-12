@@ -295,8 +295,137 @@ h2 {
     display: none;
   }
 }
+/* ABOUT */
+/*photobanner*/
+.photobanner {
+  height: 220px;
+  width: 8640px;
+  margin-top: 6%;
+  margin-bottom: 6%;
+}
 
-/* Members */
+/*keyframe animations*/
+.first {
+  -webkit-animation: bannermove 50s linear infinite;
+  -moz-animation: bannermove 50s linear infinite;
+  -ms-animation: bannermove 50s linear infinite;
+  -o-animation: bannermove 50s linear infinite;
+  animation: bannermove 50s linear infinite;
+}
+
+img.first {
+  height: 270px;
+  width: 500px;
+  border: 1rem solid #a8a8a8;
+}
+
+img.move {
+  height: 270px;
+  width: 500px;
+  border: 1rem solid #a8a8a8;
+}
+
+img.first:hover {
+  border: 1rem solid #031d3f;
+}
+
+img.move:hover {
+  border: 1rem solid #031d3f;
+}
+
+@keyframes "bannermove" {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -5746px;
+  }
+}
+
+@-moz-keyframes bannermove {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -5746px;
+  }
+}
+
+@-webkit-keyframes "bannermove" {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -5746px;
+  }
+}
+
+@-ms-keyframes "bannermove" {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -5746px;
+  }
+}
+
+@-o-keyframes "bannermove" {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -5746px;
+  }
+}
+.photobanner {
+  height: 250px;
+  width: 8700px;
+  margin-top: 10%;
+}
+
+.photobanner img.first {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.photobanner img.move {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.photobanner img.first:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  cursor: pointer;
+
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.photobanner img.move:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  cursor: pointer;
+
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* MEMBERS */
 
 .title-2 {
   font-size: 5rem;
@@ -312,31 +441,25 @@ h2 {
   box-shadow: 6px 6px 6px rgb(0, 0, 0);
 }
 
-/* Competitions */
-.wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+/* COMPETITIONS */
+.container {
   transform: translate(-50%, -50%);
-  width: 100%;
   max-width: 650px;
   height: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 .card {
-  flex: 1;
   flex-basis: 300px;
   flex-grow: 0;
   height: 440px;
   background: #fff;
   border: 2px solid #fff;
   box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
   transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
   overflow: hidden;
   position: relative;
+  margin: 0 auto;
 }
 .card img {
   width: 100%;
