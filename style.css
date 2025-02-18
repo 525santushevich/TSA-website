@@ -1,15 +1,35 @@
-/* NAVBAR */
-.logo {
-  max-height: 50px; /* Adjust as needed */
-  width: auto;
-}
-@media (max-width: 576px) {
-  .logo {
-    max-height: 40px; /* Slightly smaller on extra small screens */
-  }
+/* welcome page start */
+
+/* Ensure images fill the screen properly */
+.carousel-item img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 
-.nav-link {
-  justify-content: space-evenly;
-  padding: 20px;
+/* Centers the overlay text */
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.63);
+  max-width: 600px; /* Prevents excessive growth */
+  width: 90%; /* Ensures responsiveness */
+  padding: 20px; /* Adjusts internal spacing */
+  text-align: center;
+  border-radius: 10px; /* Softens edges */
+}
+
+/* NAVBAR */
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }

@@ -1,0 +1,125 @@
+body {
+  background-color: rgb(209, 209, 209);
+}
+
+/* NAVBAR */
+.logo {
+  max-height: 50px; /* Adjust as needed */
+  width: auto;
+}
+@media (max-width: 576px) {
+  .logo {
+    max-height: 40px; /* Slightly smaller on extra small screens */
+  }
+}
+
+.nav-link {
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+hr {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 3%;
+}
+
+/* ABOUT */
+.info {
+  margin-top: 2%;
+  flex: 1;
+  background-color: rgba(0, 23, 124, 0.733);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  text-align: center;
+  padding: 2%;
+  box-shadow: 3px 3px 3px black;
+}
+
+.about {
+  text-align: center;
+  margin-top: 4%;
+  font-family: "Special Elite", serif;
+  font-size: 4rem;
+}
+
+.description {
+  font-size: 1.5rem;
+  color: rgb(218, 217, 217);
+  font-family: "Fira Sans", serif;
+}
+
+iframe {
+  border-radius: 25px;
+  box-shadow: 3px 3px 3px black;
+}
+
+.video {
+  margin-top: 2%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CUSTOM SCROLL BAR */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d42020;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #042cad;
+}
+
+/* MARQUEE FOR ABOUT PAGE */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  background: #f4f4f4;
+  padding: 10px 0;
+  margin-top: 4%;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 40px;
+  animation: marquee 10s linear infinite;
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.marquee-item img {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.marquee-item span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
