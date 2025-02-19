@@ -18,6 +18,10 @@ body {
   padding: 20px;
 }
 
+.urmom {
+  height: 50%;
+}
+
 hr {
   max-width: 600px;
   margin: 0 auto;
@@ -38,7 +42,7 @@ hr {
   box-shadow: 3px 3px 3px black;
 }
 
-.about {
+.titles {
   text-align: center;
   margin-top: 4%;
   font-family: "Special Elite", serif;
@@ -85,37 +89,23 @@ iframe {
 .marquee-container {
   overflow: hidden;
   white-space: nowrap;
-  position: relative;
   width: 100%;
-  background: #f4f4f4;
   padding: 10px 0;
-  margin-top: 4%;
+  margin-top: 5%;
 }
-
-.marquee-content {
+.marquee {
   display: flex;
-  gap: 40px;
-  animation: marquee 10s linear infinite;
+  gap: 20px;
+  animation: scroll 20s linear infinite;
 }
-
-.marquee-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.marquee-item img {
-  width: 100px;
-  height: auto;
+.marquee img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 10px;
+  border: 3px solid #d42020;
 }
-
-.marquee-item span {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-@keyframes marquee {
+@keyframes scroll {
   from {
     transform: translateX(100%);
   }
