@@ -26,16 +26,18 @@ body {
 }
 
 #wrntz {
-  padding: 50px;
+  border-style: solid;
 }
 
 #dmart {
-  padding: 50px;
   height: 100%;
   width: 100%;
+  border-style: solid;
 }
 
 #unicorns {
+  margin-right: 20%;
+  margin-left: 20%;
 }
 
 hr {
